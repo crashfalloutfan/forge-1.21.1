@@ -1,6 +1,10 @@
 package net.jjjwelch.alpha;
 
 import com.mojang.logging.LogUtils;
+import net.jjjwelch.alpha.block.ModBlocks;
+import net.jjjwelch.alpha.item.ModCreativeModeTabs;
+import net.jjjwelch.alpha.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -27,6 +31,10 @@ public class Alpha {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -44,7 +52,10 @@ public class Alpha {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.ECHO_NUGGET);
+            event.accept(ModBlocks.VOID_STONE_ORE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
