@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "nn",
+    "nn"
+  ],
+  "key": {
+    "n": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "id": "alpha:reinforced_netherite_ingot",
+    "count": 1
+  }
+}

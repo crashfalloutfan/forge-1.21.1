@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:echo_shard"
+  },
+  "result": {
+    "id": "alpha:echo_nugget",
+    "count": 8
+  }
+}

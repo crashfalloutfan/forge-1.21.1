@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#a#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "alpha:echo_nugget"
+        },
+        "a": {
+            "item": "alpha:reinforced_netherite_ingot"
+        }
+    },
+    "result": {
+        "id": "alpha:echo_ingot",
+        "count": 1
+    }
+}

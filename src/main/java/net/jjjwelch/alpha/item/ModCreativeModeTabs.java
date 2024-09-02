@@ -16,9 +16,11 @@ public class ModCreativeModeTabs {
 
     public static final RegistryObject<CreativeModeTab> ALPHA = CREATIVE_MODE_TABS.register("alpha",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.VOID_STONE_ORE.get()))
-                    .title(Component.translatable("creativetab.alpha.alpha"))
+                    .title(Component.translatable("creative.alpha.alpha"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ECHO_NUGGET.get());
+                        output.accept(ModItems.ECHO_INGOT.get());
+                        output.accept(ModItems.REINFORCED_NETHERITE_INGOT.get());
                         output.accept(ModBlocks.VOID_STONE_ORE.get());
                     })).build());
 

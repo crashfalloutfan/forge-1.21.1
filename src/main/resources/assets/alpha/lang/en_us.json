@@ -1,5 +1,7 @@
 {
   "item.alpha.echo_nugget": "Echo Nugget",
+  "item.alpha.echo_ingot": "Echo Ingot",
+  "item.alpha.reinforced_netherite_ingot": "Reinforced Netherite Ingot",
   "block.alpha.void_stone_ore": "Void Stone Ore",
-  "creativetab.alpha.alpha": "Minecraft +"
+  "creative.alpha.alpha": "Minecraft +"
 }
